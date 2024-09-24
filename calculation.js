@@ -70,7 +70,7 @@ document.getElementById('noakhalibtn').addEventListener('click', function() {
   const donateAmountNoakhali = parseFloat(document.getElementById('donatAmountN').value); 
   const currentBalance = parseFloat(document.getElementById('currentbalance').innerText); 
 
-  // Input validation for the donation amount
+
   if (isNaN(donateAmountNoakhali) || donateAmountNoakhali <= 0) {
     document.getElementById('donatAmountN').value = '';  
     return alert('Invalid input');
@@ -115,22 +115,16 @@ document.getElementById('noakhalibtn').addEventListener('click', function() {
       document.getElementById('donatAmountf').value = '';  
       return alert('Invalid input');
     }
-  
-  
     if (donateAmountFeni > accountAmountFeni) {
       document.getElementById('donatAmountf').value = '';  
       return alert('Insufficient Balance');
     }
-  
-
     const newTotalForFeni = currentBalanceFeni + donateAmountFeni;
     const updatedAccountBalanceFeni = accountAmountFeni - donateAmountFeni;
     
     document.getElementById('totalMoney').innerText = updatedAccountBalanceFeni.toFixed(2); 
     document.getElementById('currentbalanceFeni').innerText = newTotalForFeni.toFixed(2);   
     document.getElementById('donatAmountf').value = '';
-  
- 
     openModal('You Have Donated for Feni');
     const historyCard = document.createElement('div');
     historyCard.className = 'border bg-white border-gray-200 mb-6 p-6 rounded-lg shadow-lg';
@@ -141,7 +135,6 @@ document.getElementById('noakhalibtn').addEventListener('click', function() {
         ${new Date().toLocaleString('en-GB', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' })}
       </p>
     `;
- 
     const historyAdd = document.getElementById('allhistoryitem');
     historyAdd.insertBefore(historyCard, historyAdd.firstChild);
   });
@@ -152,8 +145,6 @@ document.getElementById('humankindbtn').addEventListener('click', function() {
   const accountAmountAid = parseFloat(document.getElementById('totalMoney').innerText);  
   const donateAmountAid = parseFloat(document.getElementById('donatAmountAid').value);   
   const currentBalanceAid = parseFloat(document.getElementById('currentbalanceAid').innerText); 
-  
-  // Input validation for the donation amount
   if (isNaN(donateAmountAid) || donateAmountAid.toString().trim() === '' || donateAmountAid <= 0 ) {
     document.getElementById('donatAmountAid').value = '';  
     return alert('Invalid input');
