@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DAISYUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/fbd9117beb.js" crossorigin="anonymous"></script>
+    <!-- Customized Tailwind class -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nav: '#F9F7F3',
+                        grayy: '#1111114D', 
+                        greenn: '#B4F461',
+                       
+                    },
+                    fontFamily: {
+                        fontFamilyL: 'Lexend',
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="w-screen text-fontFamilyL  overflow-x-hidden">
+    <!-- header section -->
+    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-sm transition duration-300">
+      <nav id="nav" class="bg-nav h-20 mb-8 lg:mb-12 transition duration-300">
+        <div class="navbar mx-auto w-10/12">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <a href="./index.html" target="_parent" class="btn flex items-center bg-greenn bg-btn text-base lg:text-xl justify-center font-semibold h-8 w-16 lg:h-12 lg:w-20">
+                  Home
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-center">
+            <a class="text-xl flex items-center justify-center">
+              <img src="./assets/logo.png" class="h-9 lg:h-10" alt="">
+              <p class="lg:text-2xl  text-base font-semibold text-black lg:mt-4 mt-1 ml-1 lg:ml-3"> Donate <span class="block lg:inline">Bangladesh</span></p>
+            </a>
+          </div>
+          <div class="navbar-end">
+            <button class="flex flex-col lg:flex-row justify-center items-center gap-1 ">
+              <img src="./assets/coin.png" class="h-6 lg:h-8" alt="">
+              <h1 class="lg:text-xl text-base text-gray-500 font-semibold"> <span id="totalMoney">5500</span> BDT</h1>
+            </button>
+          </div>
+        </div>
+      </nav>
+     
+    </header>
+        <!-- main part start here -->
+    <main>
+
+        <section class="lg:mt-10 mt-6 w-10/12 border border-gray-100 mx-auto rounded-lg mb-4">
+        
+            <div class="flex lg:flex-row flex-col justify-center items-center  gap-10 lg:gap-16 p-4 lg:p-8">
+              <div class="w-full lg:w-1/3">
+                <!-- Set the image to a specific width while keeping it responsive -->
+                <img src="./assets/domm.png" class="w-full lg:h-[500px] rounded-lg" alt="DOM Image">
+              </div>
+              <div class="w-full lg:w-2/3">
+                <h1 class="text-4xl font-bold text-black text-center lg:text-left mt-2 mb-5">Important FAQ</h1>
+                <div class="collapse collapse-arrow bg-base-200 mb-3">
+                  <input type="radio" name="my-accordion-2" checked="checked" />
+                 
+                  <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                  <div class="collapse-content">
+                    <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, where each node corresponds to a part of the document, such as elements, attributes, or text. The DOM allows programming languages like JavaScript to access, modify, and interact with the HTML or XML content dynamically.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow mb-3 bg-base-200">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                  <div class="collapse-content">
+                    <p>We can select elements from the DOM using various methods provided by JavaScript. Here are some commonly used methods: getElementById, getElementsByClassName, GetElementByTagName etc.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow mb-3 bg-base-200">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                  <div class="collapse-content">
+                    <p>Event delegation is a technique in JavaScript where you attach a single event listener to a parent element to manage events triggered by its child elements. Instead of adding separate event listeners to each child element, the parent element's listener intercepts events that bubble up from child elements. This is made possible by event bubbling, where an event propagates from the target element (where the event occurred) up to its parent elements in the DOM hierarchy.</p>
+                  </div>
+                </div>
+          
+                <div class="collapse collapse-arrow mb-3 bg-base-200">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                  <div class="collapse-content">
+                    <p>To manipulate an element's attributes and styles using the DOM, you can use various methods and properties provided by JavaScript. Here's a guide to both attributes and styles manipulation:Attributes are properties defined in the HTML tag, such as id, src, href, data-*, etc. You can get, set, or remove these attributes using JavaScript.</p>
+                  </div>
+                </div>
+          
+                <div class="collapse collapse-arrow mb-3 bg-base-200">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title text-xl font-medium">What is the difference between innerHTML, textContent, and innerText when manipulating DOM content?</div>
+                  <div class="collapse-content">
+                    <p>innerHTML reads or writes HTML. <br>
+                      textContent retrieves or sets all the text content, including hidden text.<br>
+                      innerText retrieves or sets only the visible text, considering CSS visibility rules.</p>
+                  </div>
+                </div>
+          
+                <div class="collapse collapse-arrow mb-3 bg-base-200">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title text-xl font-medium"> What is the dataset property, and how can you use it to work with custom data attributes in the DOM?</div>
+                  <div class="collapse-content">
+                    <p>Dataset is a property in JavaScript that allows you to access and manipulate custom data attributes (data-*) in HTML. Custom data attributes allow you to store extra information directly in the HTML elements.</p>
+                  </div>
+                </div>
+
+                <div class="collapse collapse-arrow mb-3 bg-base-200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium"> What is the dataset property, and how can you use it to work with custom data attributes in the DOM?</div>
+                    <div class="collapse-content">
+                      <p>Dataset is a property in JavaScript that allows you to access and manipulate custom data attributes (data-*) in HTML. Custom data attributes allow you to store extra information directly in the HTML elements.</p>
+                    </div>
+                  </div>
+
+
+              </div>
+            </div>
+          </section>
+          
+
+    </main>
+    <!-- footer -->
+     <footer class="h-20 bg-nav flex justify-center items-center text-xs font-semibold text-gray-700">
+
+      All rights reserved to @DonateBangladesh.
+     </footer>
+     <script src="./calculation.js"></script>
+</body>
+</html>
