@@ -25,15 +25,10 @@ const donationButton = document.getElementById('donationbutton');
 const historyButton = document.getElementById('historybutton');
 
 historyButton.addEventListener('click', function() {
-  // Add active classes to history button
   historyButton.classList.add('bg-greenn', 'font-bold');
   historyButton.classList.remove('border', 'border-grayy', 'font-normal', 'bg-white');
-  
-  // Remove active classes from donation button
   donationButton.classList.add('bg-white', 'border', 'border-grayy', 'font-normal');
   donationButton.classList.remove('font-bold');
-  
-  // Hide donation card and show history list
   document.getElementById('container-card').classList.add('hidden');
   document.getElementById('allhistoryitem').classList.remove('hidden');
 });
