@@ -158,26 +158,16 @@ document.getElementById('humankindbtn').addEventListener('click', function() {
     document.getElementById('donatAmountAid').value = '';  
     return alert('Invalid input');
   }
-
-  // Check for sufficient balance in the account
   if (donateAmountAid > accountAmountAid) {
     document.getElementById('donatAmountAid').value = '';  
     return alert('Insufficient Balance');
   }
-
-  // Calculate the new balances after the donation
   const newTotalForAid = currentBalanceAid + donateAmountAid;
   const updatedAccountBalanceAid = accountAmountAid - donateAmountAid;
-  
-  // Update the displayed account and Aid balances
   document.getElementById('totalMoney').innerText = updatedAccountBalanceAid.toFixed(2); 
   document.getElementById('currentbalanceAid').innerText = newTotalForAid.toFixed(2);  
   document.getElementById('donatAmountAid').value = '';
-
-  // Open a confirmation modal after successful donation
   openModal('You Have Donated for Humankind');
-
-  // Create a history card for the donation
   const historyCard = document.createElement('div');
   historyCard.className = 'border bg-white border-gray-200 mb-6 p-6 rounded-lg shadow-lg';
   
@@ -187,8 +177,6 @@ document.getElementById('humankindbtn').addEventListener('click', function() {
       ${new Date().toLocaleString('en-GB', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' })}
     </p>
   `;
-  
-  // Add the history card to the donation history section
   const historyAdd = document.getElementById('allhistoryitem');
   historyAdd.insertBefore(historyCard, historyAdd.firstChild);
 });
