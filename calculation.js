@@ -61,11 +61,9 @@ function getInputButton(id) {
 // noakhali donation function
 document.getElementById('noakhalibtn').addEventListener('click', function() {
 
-  const accountAmount = parseFloat(document.getElementById('totalMoney').innerText); 
-  const donateAmountNoakhali = parseFloat(document.getElementById('donatAmountN').value); 
-  const currentBalance = parseFloat(document.getElementById('currentbalance').innerText); 
-
-
+   const accountAmount =   getInputButton('totalMoney');
+  const donateAmountNoakhali =  getInputId('donatAmountN');
+  const currentBalance =getInputButton('currentbalance');
   if (isNaN(donateAmountNoakhali) || donateAmountNoakhali <= 0) {
     document.getElementById('donatAmountN').value = '';  
     return alert('Invalid input');
@@ -101,9 +99,9 @@ document.getElementById('noakhalibtn').addEventListener('click', function() {
   // Donate button for feni
   document.getElementById('fenibtn').addEventListener('click', function() {
 
-    const accountAmountFeni = parseFloat(document.getElementById('totalMoney').innerText); 
-    const donateAmountFeni = parseFloat(document.getElementById('donatAmountf').value);     
-    const currentBalanceFeni = parseFloat(document.getElementById('currentbalanceFeni').innerText); 
+    const accountAmountFeni =  getInputButton('totalMoney');
+    const donateAmountFeni =  getInputId('donatAmountf');  
+    const currentBalanceFeni = getInputButton('currentbalanceFeni');
     
   
     if (isNaN(donateAmountFeni) || donateAmountFeni.toString().trim() === '' || donateAmountFeni <= 0 ) {
@@ -137,9 +135,9 @@ document.getElementById('noakhalibtn').addEventListener('click', function() {
 // donate for humankind
 document.getElementById('humankindbtn').addEventListener('click', function() {
 
-  const accountAmountAid = parseFloat(document.getElementById('totalMoney').innerText);  
-  const donateAmountAid = parseFloat(document.getElementById('donatAmountAid').value);   
-  const currentBalanceAid = parseFloat(document.getElementById('currentbalanceAid').innerText); 
+  const accountAmountAid = getInputButton('totalMoney'); 
+  const donateAmountAid =  getInputId('donatAmountAid');
+  const currentBalanceAid =  getInputButton('currentbalanceAid');
   if (isNaN(donateAmountAid) || donateAmountAid.toString().trim() === '' || donateAmountAid <= 0 ) {
     document.getElementById('donatAmountAid').value = '';  
     return alert('Invalid input');
